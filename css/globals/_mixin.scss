@@ -1,0 +1,8 @@
+@mixin animation{
+    duration: 1s;
+    timing-function: ease;
+    direction: normal;
+    delay: .3s;
+    iteration-count: 1;
+    fill-mode: forwards;
+}

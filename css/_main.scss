@@ -1,1 +1,21 @@
 @use 'globals' as *;
+
+main {
+    .main-wrapper {
+        opacity: 0;
+        top: -100px;
+
+        &.animation {
+            opacity: 1;
+            top: 0;
+        }
+
+        h2 {
+            color: $cWhite;
+            font-family: serif;
+            font-size: 2rem;
+            text-shadow: 0 0 3px $cBlack;
+            text-align: center;
+        }
+    }
+}
