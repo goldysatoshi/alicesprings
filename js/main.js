@@ -11,14 +11,18 @@ menuBtn.addEventListener('click', () => {
     }
 })
 
-const animationObject = document.querySelector('.animation-object');
+const animationObjects = document.querySelectorAll('.animation-object');
 
-const showAnimation = () => {
-    animationObject.classList.add('animation');
-}
-
-const animationObserver = new IntersectionObserver(showAnimation);
-
-animationObserver.observe(document.querySelector('.animation-object'));
+animationObjects.forEach(animationObject => {
+    
+    const showAnimation = () => {
+        animationObject.classList.add('animation');
+        // observe.unobserve(animationObject)
+    }
+    
+    const animationObserver = new IntersectionObserver(showAnimation);
+    
+    animationObserver.observe(animationObject);
+});
 
 

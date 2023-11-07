@@ -3,11 +3,14 @@
 main {
     .main-wrapper {
         opacity: 0;
-        top: -100px;
 
         &.animation {
-            opacity: 1;
-            top: 0;
+            animation-name: main-animation;
+            animation-duration: 2s;
+            animation-delay: .5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+
         }
 
         h2 {
@@ -16,6 +19,18 @@ main {
             font-size: 2rem;
             text-shadow: 0 0 3px $cBlack;
             text-align: center;
+            padding-top: 20rem;
         }
     }
+}
+
+@keyframes main-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+    100% {
+     opacity: 1;
+     transform: translateY(0);
+     }
 }
