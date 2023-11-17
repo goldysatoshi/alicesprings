@@ -13,7 +13,7 @@ menuBtn.addEventListener('click', () => {
 
 const animationObjects = document.querySelectorAll('.animation-object');
 
-animationObjects.forEach(animationObject => {
+animationObjects.forEach((animationObject) => {
     
     const showAnimation = () => {
         animationObject.classList.add('animation');

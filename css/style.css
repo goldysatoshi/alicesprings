@@ -36,15 +36,11 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-.top-wrapper {
-  background-image: url(../images/alicesprings-main.jpg);
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+header {
+  position: flex;
+  z-index: 5;
 }
-.top-wrapper header .header-wrapper {
+header .header-wrapper {
   width: 100%;
   height: 60px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -52,8 +48,10 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: flex-end;
   padding: 0 2rem 0.4rem;
+  z-index: 5;
+  position: fixed;
 }
-.top-wrapper header .header-wrapper h1 a {
+header .header-wrapper h1 a {
   color: white;
   text-decoration: none;
   font-size: 1.8rem;
@@ -61,7 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: serif;
   text-shadow: 0px 0px 3px black;
 }
-.top-wrapper header .header-wrapper .menu-btn {
+header .header-wrapper .menu-btn {
   font-family: serif;
   color: white;
   font-weight: 600;
@@ -74,11 +72,12 @@ p, h1, h2, h3, h4, h5, h6 {
           appearance: none;
   text-shadow: 0px 0px 3px black;
 }
-.top-wrapper header .nav-list {
+header .nav-list {
   padding: 0;
+  margin-top: 60px;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 5;
-  position: relative;
+  position: fixed;
   top: 0;
   right: -100%;
   width: 0;
@@ -86,18 +85,19 @@ p, h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   transition: 0.9s;
 }
-.top-wrapper header .nav-list.menu-open {
+header .nav-list.menu-open {
   right: 0;
   opacity: 1;
   width: 100%;
+  overflow: hidden;
 }
-.top-wrapper header .nav-list li {
+header .nav-list li {
   list-style: none;
   width: 100%;
   padding: 1.2rem 0;
   text-align: center;
 }
-.top-wrapper header .nav-list li a {
+header .nav-list li a {
   color: white;
   font-family: serif;
   font-weight: 700;
@@ -106,25 +106,44 @@ p, h1, h2, h3, h4, h5, h6 {
   text-shadow: 0px 0px 3px black;
 }
 
-main .main-wrapper {
+.top-wrapper {
+  background-image: url(../images/alicesprings-main.jpg);
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.top-wrapper main {
+  position: absolute;
+  z-index: 4;
+}
+.top-wrapper main .main-wrapper {
   opacity: 0;
 }
-main .main-wrapper.animation {
+.top-wrapper main .main-wrapper.animation {
   animation-name: main-animation;
   animation-duration: 2s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
-main .main-wrapper h2 {
+.top-wrapper main .main-wrapper p {
   color: white;
   font-family: serif;
   font-size: 2rem;
+  font-weight: 700;
   text-shadow: 0 0 3px black;
   text-align: center;
-  padding-top: 20rem;
+  padding-top: 680px;
 }
-
+@media (max-height: 740px) {
+  .top-wrapper main .main-wrapper p {
+    padding-top: 200px;
+  }
+}
 @keyframes main-animation {
   0% {
     opacity: 0;
@@ -133,5 +152,78 @@ main .main-wrapper h2 {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.feature-wrapper {
+  margin: 2rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.5rem;
+}
+@media (min-width: 960px) {
+  .feature-wrapper {
+    margin: 5rem;
+  }
+}
+.feature-wrapper .feature-title {
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+}
+.feature-wrapper .feature-title.animation {
+  animation-name: feature-animation;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+.feature-wrapper .feature-title h2 {
+  font-family: serif;
+  font-size: 1.2rem;
+  line-height: 1rem;
+}
+.feature-wrapper .feature-title p {
+  font-family: serif;
+  font-size: 0.8rem;
+}
+.feature-wrapper .contents-wrapper .feature-contents {
+  padding-bottom: 40px;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+@media (min-width: 960px) {
+  .feature-wrapper .contents-wrapper .feature-contents {
+    display: flex;
+    margin-top: 2rem;
+  }
+  .feature-wrapper .contents-wrapper .feature-contents.reverce {
+    flex-direction: row-reverse;
+  }
+  .feature-wrapper .contents-wrapper .feature-contents.reverce .feature-subtit {
+    margin: 0 2rem 0 0;
+  }
+}
+.feature-wrapper .contents-wrapper .feature-contents img {
+  width: 100%;
+}
+@media (min-width: 960px) {
+  .feature-wrapper .contents-wrapper .feature-contents .feature-subtit {
+    width: 60%;
+    margin-left: 2rem;
+  }
+}
+.feature-wrapper .contents-wrapper .feature-contents .feature-subtit h3 {
+  font-family: serif;
+  margin: 10px 0;
+}
+.feature-wrapper .contents-wrapper .feature-contents .feature-subtit p {
+  letter-spacing: 0.3rem;
+}
+@keyframes feature-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */

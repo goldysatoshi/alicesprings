@@ -1,1 +1,99 @@
 @use 'globals' as *;
+@use 'main' as *;
+
+.feature {
+
+    &-wrapper {
+        margin: 2rem;
+        letter-spacing: 0.2rem;
+        line-height: 1.5rem;
+
+        @include mq(lg) {
+            margin: 5rem;
+        }
+        
+        .feature-title {
+            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0;
+
+            &.animation {
+                animation-name: feature-animation;
+                animation-duration: 2s;
+                animation-delay: 1.5s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease;
+            }
+            
+            h2 {
+                font-family: serif;
+                font-size: 1.2rem;
+                line-height: 1rem;
+            }
+
+            p {
+                font-family: serif;
+                font-size: 0.8rem;
+                
+            }
+        }
+        
+        .contents-wrapper {
+
+            .feature-contents {
+                padding-bottom: 40px;
+                margin: 0 auto;
+                max-width: 1080px;
+
+                @include mq(lg) {
+                    display: flex;
+                    margin-top: 2rem;
+                    &.reverce {
+                        flex-direction: row-reverse;
+
+                        .feature-subtit {
+                            margin: 0 2rem 0 0;
+                        }
+                    }
+                    
+                }
+
+                img {
+                    width: 100%;
+                }
+                
+    
+                .feature-subtit {
+
+                    @include mq(lg) {
+                        width: 60%;
+                        margin-left: 2rem;
+                    }
+                    
+    
+                    h3 {
+                        font-family: serif;
+                        margin: 10px 0;
+                    }
+    
+                    p {
+                        letter-spacing: 0.3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes feature-animation {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+
+}

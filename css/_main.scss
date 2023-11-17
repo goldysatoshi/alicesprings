@@ -1,6 +1,20 @@
 @use 'globals' as *;
 
+.top-wrapper {
+    background-image: url(../images/alicesprings-main.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    
+    
+
 main {
+    position: absolute;
+    z-index: 4;
     .main-wrapper {
         opacity: 0;
 
@@ -13,13 +27,21 @@ main {
 
         }
 
-        h2 {
+        p {
             color: $cWhite;
             font-family: serif;
             font-size: 2rem;
+            font-weight: 700;
             text-shadow: 0 0 3px $cBlack;
             text-align: center;
-            padding-top: 20rem;
+            padding-top: 680px;
+            
+           
+
+
+            @media (max-height: 740px) {
+                padding-top: 200px;   
+            }
         }
     }
 }
@@ -33,4 +55,6 @@ main {
      opacity: 1;
      transform: translateY(0);
      }
+}
+
 }
