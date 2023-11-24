@@ -1,1 +1,110 @@
 @use 'globals' as *;
+
+.food {
+    &-wrapper {
+        margin: 2rem;
+        letter-spacing: 0.2rem;
+        line-height: 1.5rem;
+
+        @include mq(lg) {
+            margin: 5rem;
+        }
+        
+        .food-title {
+            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0;
+
+            &.animation {
+                animation-name: food-animation;
+                animation-duration: 2s;
+                animation-delay: 1.5s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease;
+            }
+            
+            h2 {
+                font-family: serif;
+                font-size: 1.2rem;
+                line-height: 1rem;
+            }
+
+            p {
+                font-family: serif;
+                font-size: 0.8rem;
+                
+            }
+        }
+
+        .menu {
+
+            @include mq(lg) {
+                display: flex;
+                flex-wrap: wrap;
+                
+            }
+            
+            .menu-list {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+
+                @include mq(lg) {
+                    width: calc(50% - 1rem);
+                    padding: 1rem;
+                    margin: 0 auto;
+                }
+                
+                .menu-name {
+                    margin-bottom: 20px;
+                    
+                    p {
+                        font-weight: 600;
+                        font-size: 1rem;
+                        font-family: serif;
+                    }
+
+                    span {
+                        font-size: 0.6rem;
+                        display: block;
+                    }
+                }
+
+                // .line {
+                //     @include mq(lg) {
+                //         height: 3px;
+                //         width: 20%;
+                //         position: relative;
+                //         top: -5px;
+                //         border-bottom: 1px solid black;
+                //     }
+                // }
+
+                .fee {
+                    p {
+                        font-weight: 600;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+
+        .food-img-wrapper {
+            display: flex;
+
+            .food-img {
+                width: 33%;
+            }
+        }
+    }
+
+    @keyframes food-animation {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}

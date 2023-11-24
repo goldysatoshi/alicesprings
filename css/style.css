@@ -226,4 +226,161 @@ header .nav-list li a {
   100% {
     opacity: 1;
   }
+}
+
+.beer-wrapper {
+  margin: 2rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.5rem;
+}
+@media (min-width: 960px) {
+  .beer-wrapper {
+    margin: 5rem;
+  }
+}
+.beer-wrapper .beer-title {
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+}
+.beer-wrapper .beer-title.animation {
+  animation-name: beer-animation;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+.beer-wrapper .beer-title h2 {
+  font-family: serif;
+  font-size: 1.2rem;
+  line-height: 1rem;
+}
+.beer-wrapper .beer-title p {
+  font-family: serif;
+  font-size: 0.8rem;
+}
+.beer .beer-contents {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.beer .beer-contents .beer-kind {
+  width: calc(50% - 1rem);
+  padding: 1rem;
+}
+@media (min-width: 960px) {
+  .beer .beer-contents .beer-kind {
+    width: calc(25% - 1rem);
+  }
+}
+.beer .beer-contents .beer-kind p {
+  text-align: center;
+  font-family: serif;
+  padding-top: 1rem;
+}
+@keyframes beer-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.food-wrapper {
+  margin: 2rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.5rem;
+}
+@media (min-width: 960px) {
+  .food-wrapper {
+    margin: 5rem;
+  }
+}
+.food-wrapper .food-title {
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+}
+.food-wrapper .food-title.animation {
+  animation-name: food-animation;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+.food-wrapper .food-title h2 {
+  font-family: serif;
+  font-size: 1.2rem;
+  line-height: 1rem;
+}
+.food-wrapper .food-title p {
+  font-family: serif;
+  font-size: 0.8rem;
+}
+@media (min-width: 960px) {
+  .food-wrapper .menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.food-wrapper .menu .menu-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@media (min-width: 960px) {
+  .food-wrapper .menu .menu-list {
+    width: calc(50% - 1rem);
+    padding: 1rem;
+    margin: 0 auto;
+  }
+}
+.food-wrapper .menu .menu-list .menu-name {
+  margin-bottom: 20px;
+}
+.food-wrapper .menu .menu-list .menu-name p {
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: serif;
+}
+.food-wrapper .menu .menu-list .menu-name span {
+  font-size: 0.6rem;
+  display: block;
+}
+.food-wrapper .menu .menu-list .fee p {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.food-wrapper .food-img-wrapper {
+  display: flex;
+}
+.food-wrapper .food-img-wrapper .food-img {
+  width: 33%;
+}
+@keyframes food-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+footer .footer-wrapper {
+  margin: 2rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.5rem;
+}
+@media (min-width: 960px) {
+  footer .footer-wrapper {
+    margin: 5rem;
+  }
+}
+footer .footer-wrapper .footer-menu .footer-mune-li {
+  padding: 2rem 0;
+}
+footer .footer-wrapper .footer-menu .footer-mune-li h3 {
+  padding: 1rem 0;
 }/*# sourceMappingURL=style.css.map */
