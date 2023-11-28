@@ -1,7 +1,6 @@
 @use 'globals' as *;
 
 
-
     header {
         position: flex;
         z-index: 5;
@@ -16,6 +15,11 @@
         padding: 0 2rem 0.4rem;
         z-index: 5;
         position: fixed;
+        transition: .4s;
+
+        &.header-change {
+            background-color: $cWood;
+        }
 
         h1 a {
             color: $cWhite;

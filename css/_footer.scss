@@ -1,6 +1,7 @@
 @use 'globals' as *;
 
 footer {
+    background-color: $cWood;
     // background-color: rgba;
     .footer-wrapper {
         margin: 2rem;
@@ -12,12 +13,56 @@ footer {
         }
 
         .footer-menu {
+            margin-bottom: 2rem;
+            @include mq(lg) {
+                display: flex;
+            }
+            .footer-menu-li {
+                padding: 1rem 0;
 
-            .footer-mune-li {
-                padding: 2rem 0;
+            @include mq(lg) {
+                width: 30%;
+            }
                 h3 {
+                    font-family: serif;
                     padding: 1rem 0;
+                    color: $cWhite;
+                    text-shadow: 0 0 5px $cBlack;
                 }
+
+                p {
+                    color: $cWhite;
+                    text-shadow: 0 0 5px $cBlack;
+                }
+
+                .hour {
+                    padding: 0.3rem 0;
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style: none;
+    
+                        a {
+                            text-decoration: none;
+                            font-weight: 300;
+                            font-size: 16px;
+                            color: $cWhite;
+                            text-shadow: 0 0 5px $cBlack;                            
+                        }
+                    }
+                }
+            }
+
+        }
+        .copy-right {
+            border-top: 1px solid $cWhite;
+            p {
+                text-align: center;
+                color: $cWhite;
+                text-shadow: 0 0 5px $cBlack;
             }
         }
     }

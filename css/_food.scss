@@ -3,6 +3,7 @@
 .food {
     &-wrapper {
         margin: 2rem;
+        margin-top: 4rem;
         letter-spacing: 0.2rem;
         line-height: 1.5rem;
 
@@ -17,8 +18,8 @@
 
             &.animation {
                 animation-name: food-animation;
-                animation-duration: 2s;
-                animation-delay: 1.5s;
+                animation-duration: 1.5s;
+                animation-delay: .3s;
                 animation-fill-mode: forwards;
                 animation-timing-function: ease;
             }

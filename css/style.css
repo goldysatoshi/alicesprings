@@ -50,6 +50,10 @@ header .header-wrapper {
   padding: 0 2rem 0.4rem;
   z-index: 5;
   position: fixed;
+  transition: 0.4s;
+}
+header .header-wrapper.header-change {
+  background-color: #c4a789;
 }
 header .header-wrapper h1 a {
   color: white;
@@ -108,11 +112,9 @@ header .nav-list li a {
 
 .top-wrapper {
   background-image: url(../images/alicesprings-main.jpg);
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
+  background-size: cover;
   height: 100vh;
+  background-position: center;
   display: flex;
   justify-content: center;
 }
@@ -137,12 +139,7 @@ header .nav-list li a {
   font-weight: 700;
   text-shadow: 0 0 3px black;
   text-align: center;
-  padding-top: 680px;
-}
-@media (max-height: 740px) {
-  .top-wrapper main .main-wrapper p {
-    padding-top: 200px;
-  }
+  padding-top: 80vh;
 }
 @keyframes main-animation {
   0% {
@@ -157,6 +154,7 @@ header .nav-list li a {
 
 .feature-wrapper {
   margin: 2rem;
+  margin-top: 4rem;
   letter-spacing: 0.2rem;
   line-height: 1.5rem;
 }
@@ -172,8 +170,8 @@ header .nav-list li a {
 }
 .feature-wrapper .feature-title.animation {
   animation-name: feature-animation;
-  animation-duration: 2s;
-  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
@@ -205,6 +203,14 @@ header .nav-list li a {
 }
 .feature-wrapper .contents-wrapper .feature-contents img {
   width: 100%;
+  opacity: 0;
+}
+.feature-wrapper .contents-wrapper .feature-contents img.animation {
+  animation-name: img-animation;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
 }
 @media (min-width: 960px) {
   .feature-wrapper .contents-wrapper .feature-contents .feature-subtit {
@@ -227,6 +233,16 @@ header .nav-list li a {
     opacity: 1;
   }
 }
+@keyframes img-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .beer-wrapper {
   margin: 2rem;
@@ -245,8 +261,8 @@ header .nav-list li a {
 }
 .beer-wrapper .beer-title.animation {
   animation-name: beer-animation;
-  animation-duration: 2s;
-  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
@@ -290,6 +306,7 @@ header .nav-list li a {
 
 .food-wrapper {
   margin: 2rem;
+  margin-top: 4rem;
   letter-spacing: 0.2rem;
   line-height: 1.5rem;
 }
@@ -305,8 +322,8 @@ header .nav-list li a {
 }
 .food-wrapper .food-title.animation {
   animation-name: food-animation;
-  animation-duration: 2s;
-  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
@@ -368,6 +385,9 @@ header .nav-list li a {
   }
 }
 
+footer {
+  background-color: #c4a789;
+}
 footer .footer-wrapper {
   margin: 2rem;
   letter-spacing: 0.2rem;
@@ -378,9 +398,54 @@ footer .footer-wrapper {
     margin: 5rem;
   }
 }
-footer .footer-wrapper .footer-menu .footer-mune-li {
-  padding: 2rem 0;
+footer .footer-wrapper .footer-menu {
+  margin-bottom: 2rem;
 }
-footer .footer-wrapper .footer-menu .footer-mune-li h3 {
+@media (min-width: 960px) {
+  footer .footer-wrapper .footer-menu {
+    display: flex;
+  }
+}
+footer .footer-wrapper .footer-menu .footer-menu-li {
   padding: 1rem 0;
+}
+@media (min-width: 960px) {
+  footer .footer-wrapper .footer-menu .footer-menu-li {
+    width: 30%;
+  }
+}
+footer .footer-wrapper .footer-menu .footer-menu-li h3 {
+  font-family: serif;
+  padding: 1rem 0;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+footer .footer-wrapper .footer-menu .footer-menu-li p {
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+footer .footer-wrapper .footer-menu .footer-menu-li .hour {
+  padding: 0.3rem 0;
+}
+footer .footer-wrapper .footer-menu .footer-menu-li ul {
+  margin: 0;
+  padding: 0;
+}
+footer .footer-wrapper .footer-menu .footer-menu-li ul li {
+  list-style: none;
+}
+footer .footer-wrapper .footer-menu .footer-menu-li ul li a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+footer .footer-wrapper .copy-right {
+  border-top: 1px solid white;
+}
+footer .footer-wrapper .copy-right p {
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 5px black;
 }/*# sourceMappingURL=style.css.map */

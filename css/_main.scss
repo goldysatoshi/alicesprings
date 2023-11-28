@@ -2,16 +2,19 @@
 
 .top-wrapper {
     background-image: url(../images/alicesprings-main.jpg);
-    object-fit: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
+    background-size: cover;
     height: 100vh;
+    background-position: center;
     display: flex;
     justify-content: center;
+    // object-fit: cover;
+    // background-repeat: no-repeat;
+    // background-position-x: center;
+    // height: 100vh;
+    // display: flex;
+    // justify-content: center;
 
     
-    
-
 main {
     position: absolute;
     z-index: 4;
@@ -34,14 +37,9 @@ main {
             font-weight: 700;
             text-shadow: 0 0 3px $cBlack;
             text-align: center;
-            padding-top: 680px;
+            padding-top: 80vh;
             
            
-
-
-            @media (max-height: 740px) {
-                padding-top: 200px;   
-            }
         }
     }
 }
