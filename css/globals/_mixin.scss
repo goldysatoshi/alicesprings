@@ -1,8 +1,29 @@
-@mixin animation{
-    duration: 1s;
-    timing-function: ease;
-    direction: normal;
-    delay: .3s;
-    iteration-count: 1;
-    fill-mode: forwards;
+@mixin animation(
+  $name: visibleanimation,
+  $duration: 1.5s,
+  $timing-function: ease,
+  $delay: .3s,
+  $iteration-count: 1,
+  $direction: normal,
+  $fill-mode: forwards
+) {
+  animation: {
+    name: $name;
+    duration: $duration;
+    timing-function: $timing-function;
+    delay: $delay;
+    iteration-count: $iteration-count;
+    direction: $direction;
+    fill-mode: $fill-mode;
+  }
+
+  @keyframes visibleanimation{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 }

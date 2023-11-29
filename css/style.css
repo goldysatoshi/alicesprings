@@ -128,9 +128,19 @@ header .nav-list li a {
 .top-wrapper main .main-wrapper.animation {
   animation-name: main-animation;
   animation-duration: 2s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
   animation-timing-function: ease;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes visibleanimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .top-wrapper main .main-wrapper p {
   color: white;
@@ -169,11 +179,21 @@ header .nav-list li a {
   opacity: 0;
 }
 .feature-wrapper .feature-title.animation {
-  animation-name: feature-animation;
+  animation-name: visibleanimation;
   animation-duration: 1.5s;
-  animation-delay: 0.3s;
-  animation-fill-mode: forwards;
   animation-timing-function: ease;
+  animation-delay: 0.3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes visibleanimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .feature-wrapper .feature-title h2 {
   font-family: serif;
@@ -208,9 +228,19 @@ header .nav-list li a {
 .feature-wrapper .contents-wrapper .feature-contents img.animation {
   animation-name: img-animation;
   animation-duration: 1.5s;
-  animation-delay: 0.3s;
-  animation-fill-mode: forwards;
   animation-timing-function: ease;
+  animation-delay: 0.3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes visibleanimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media (min-width: 960px) {
   .feature-wrapper .contents-wrapper .feature-contents .feature-subtit {
@@ -224,14 +254,6 @@ header .nav-list li a {
 }
 .feature-wrapper .contents-wrapper .feature-contents .feature-subtit p {
   letter-spacing: 0.3rem;
-}
-@keyframes feature-animation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 @keyframes img-animation {
   0% {
@@ -262,9 +284,19 @@ header .nav-list li a {
 .beer-wrapper .beer-title.animation {
   animation-name: beer-animation;
   animation-duration: 1.5s;
-  animation-delay: 0.3s;
-  animation-fill-mode: forwards;
   animation-timing-function: ease;
+  animation-delay: 0.3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes visibleanimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .beer-wrapper .beer-title h2 {
   font-family: serif;
@@ -323,9 +355,19 @@ header .nav-list li a {
 .food-wrapper .food-title.animation {
   animation-name: food-animation;
   animation-duration: 1.5s;
-  animation-delay: 0.3s;
-  animation-fill-mode: forwards;
   animation-timing-function: ease;
+  animation-delay: 0.3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes visibleanimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .food-wrapper .food-title h2 {
   font-family: serif;

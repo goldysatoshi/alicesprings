@@ -22,11 +22,13 @@ main {
         opacity: 0;
 
         &.animation {
-            animation-name: main-animation;
-            animation-duration: 2s;
-            animation-delay: .5s;
-            animation-fill-mode: forwards;
-            animation-timing-function: ease;
+            @include animation(
+                $name: main-animation,
+                $duration: 2s,
+                $delay: .5s,
+                $fill-mode: forwards,
+                $timing-function: ease
+            );
 
         }
 

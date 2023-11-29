@@ -1,5 +1,4 @@
 @use 'globals' as *;
-@use 'main' as *;
 
 .feature {
 
@@ -19,11 +18,7 @@
             opacity: 0;
 
             &.animation {
-                animation-name: feature-animation;
-                animation-duration: 1.5s;
-                animation-delay: .3s;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease;
+                @include animation
             }
             
             h2 {
@@ -66,11 +61,13 @@
                         opacity: 0;
 
                         &.animation {
-                            animation-name: img-animation;
-                            animation-duration: 1.5s;
-                            animation-delay: .3s;
-                            animation-fill-mode: forwards;
-                            animation-timing-function: ease;
+                            @include animation(
+                                $name: img-animation,
+                                $duration: 1.5s,
+                                $delay: .3s,
+                                $fill-mode: forwards,
+                                $timing-function: ease
+                            );
                         }
                     }
 
@@ -97,15 +94,15 @@
         }
     }
 
-    @keyframes feature-animation {
-        0% {
-            opacity: 0;
-        }
+    // @keyframes feature-animation {
+    //     0% {
+    //         opacity: 0;
+    //     }
 
-        100% {
-            opacity: 1;
-        }
-    }
+    //     100% {
+    //         opacity: 1;
+    //     }
+    // }
 
     @keyframes img-animation {
         0% {
